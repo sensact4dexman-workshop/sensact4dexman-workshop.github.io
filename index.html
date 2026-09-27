@@ -7,6 +7,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
+    /* Keep section tops clear of the pinned banner and navigation bar when jumping to a section. */
+    html { scroll-padding-top: 6.5rem; }
     /* Speaker detail windows */
     body:has(dialog[open]) { overflow: hidden; }
     dialog.speaker-dialog[open] { animation: speaker-dialog-in 0.22s ease-out; }
@@ -16,11 +18,11 @@
   </style>
 </head>
 <body class="min-h-screen bg-white text-slate-900">
-  <!-- Live notice banner: delete this block when it no longer applies. -->
-  <div role="status" class="border-b border-amber-300 bg-amber-100 px-6 py-2.5 text-center text-sm font-medium text-amber-900">
-    <i class="fa fa-clock-o mr-1.5"></i>Live update: we are running about 10 minutes behind schedule.
-  </div>
   <header class="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur">
+    <!-- Live notice banner: delete this block when it no longer applies. -->
+    <div role="status" class="border-b border-amber-300 bg-amber-100 px-6 py-2.5 text-center text-sm font-medium text-amber-900">
+      <i class="fa fa-clock-o mr-1.5"></i>Live update: we are running about 10 minutes behind schedule.
+    </div>
     <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
       <a href="#home" class="text-sm font-semibold tracking-wide text-slate-900">IROS 2026 Workshop</a>
       <nav class="hidden gap-6 text-sm text-slate-600 md:flex">
